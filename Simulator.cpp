@@ -406,7 +406,7 @@ void Simulator::simulate()
     auto checkins_iter = checkins.begin();
     Event* event;
 
-    std::ofstream daily_out_file("daily_"+output_file_loc, std::fstream::app);
+    std::ofstream daily_out_file(output_file_loc, std::fstream::app);
     daily_out_file << "day,infected count,recovered count,susceptible count,PollSusc_L,PollSusc_U,PollSpreader" << std::endl;
     daily_out_file.close();
     add_event(EVENT_DAILY_REPORT, NULL, NULL, this->begin_time, NULL);
@@ -562,7 +562,7 @@ double Simulator::calc_avg_daily_no_colocations(int day)
 
 void Simulator::save_daily_spread_report(int curr_day, int time)
 {
-    std::ofstream daily_out_file("daily_"+output_file_loc, std::fstream::app);
+    std::ofstream daily_out_file(output_file_loc, std::fstream::app);
     double est_lower = 0;
     double est_upper = 0;
     if (alg_sus)
