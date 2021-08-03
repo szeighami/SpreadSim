@@ -9,10 +9,10 @@ config['TIME_TO_RECOVER_MEAN'] = 12*24*3600
 config['TIME_TO_RECOVER_STD'] = 0
 config['TIME_TO_SPREAD_MEAN'] = 5*24*3600
 config['TIME_TO_SPREAD_STD'] = 0
-config['INFECTING_TIME'] = 3600
-config['INFECTING_DISTANCE'] = 0.0001
-config['INFECTING_PROB'] =0.01
-config['PROB_INIT_INFECTED'] = 0.1
+config['INFECTING_TIME'] = 3600 # Minimum duration for a contact
+config['INFECTING_DISTANCE'] = 0.0001 # Maximum distance for a contact
+config['INFECTING_PROB'] =0.01 # Probability of transmission given a contact
+config['PROB_INIT_INFECTED'] = 0.1 # Probability of an agent being infected initially
 
 #Location dataset
 config['DATA_LOC'] = '/path/to/data' #Path to location dataset
