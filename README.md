@@ -5,7 +5,7 @@ This repository implements SpreadSim from [1] to simulate the spread of a contag
 Running SpreadSim requires c++11. It has been tested with g++ 7.5. 
 
 ## To Run
-Compile SpreadSim by calling make. Upon successful compilation, calling ./simulator runs SpreadSim. Running SpreadSim requires a config file called config.txt at the working directory. The python script run.py is provided for convinience, and automatically creates this config file and then runs SpreadSim. Possible configuration and their description is discussed in run.py. 
+Compile SpreadSim by calling make. Upon successful compilation, calling ./simulator runs SpreadSim. Running SpreadSim requires a config file called config.txt at the working directory. The python script run.py is provided for convinience, and calling python run.py automatically creates this config file and then runs SpreadSim. Possible configuration and their description are discussed in run.py. 
 
 ## Location Dataset
 SpreadSim requires a dataset of location trajectories. Specify the path to this dataset in run.py using DATA_LOC parameter. Everyline of the dataset must contains check-ins of the format (usr_id, lat, lon, time_stamp), where usr_id is a unique identifier for each agent in the simulation. All the check-ins of a user must be written consequitively and for each user, its check-ins must be sorted in the decreasing order of time.
